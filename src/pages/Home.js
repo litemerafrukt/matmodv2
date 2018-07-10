@@ -6,7 +6,7 @@ export const Home = () => (
         <p>Här presenterar jag mina kursmomentsrapporter för kursen "matmod" på BTH.</p>
         <p>
             Koden för sidan ligger på github:{" "}
-            <a href="https://github.com/litemerafrukt/matmod">
+            <a href="https://github.com/litemerafrukt/matmodv2">
                 https://github.com/litemerafrukt/matmod
             </a>
         </p>
