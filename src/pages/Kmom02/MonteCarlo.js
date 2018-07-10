@@ -58,6 +58,12 @@ export class MonteCarlo extends Component {
         this.calcGraph();
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.n !== this.props.n) {
+            this.setState({ calcMess: initialState.calcMess });
+        }
+    }
+
     componentDidUpdate(prevProps) {
         if (prevProps.n !== this.props.n) {
             this.calcGraph();
@@ -76,7 +82,7 @@ export class MonteCarlo extends Component {
                     <p>Under: {this.state.pointSums.inside}</p>
                     <p>Pr(U): {round(this.state.PrU, 4) || "..."}</p>
                     <p>Area: {round(this.state.area, 3) || "..."}</p>
-                    <p>n = {this.props.n}</p>
+                    <p>n: {this.props.n}</p>
                 </div>
             </div>
         );
